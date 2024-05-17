@@ -1,3 +1,3 @@
-from api.model.part import *
-from api.model.order import *
-from api.model.order_detail import *
+from api.model.case import Case
+from api.model.pathology import Pathology
+from api.model.patient import Patient
