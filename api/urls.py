@@ -5,4 +5,5 @@ urlpatterns = [
     path("pathology/", include("api.controllers.pathology")),
     path("case/", include("api.controllers.case")),
     path("judge/", include("api.controllers.judge")),
+    path("patient/", include("api.controllers.patient")),
 ]
