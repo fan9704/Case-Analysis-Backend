@@ -29,4 +29,9 @@ class PathologyToCaseAPIView(APIView):
         case = CaseGeneralSerializer(data=res)
         case.is_valid(raise_exception=True)
         case.save()
-        return Response(res, status=200)
+        return Response(case.data, status=200)
+
+
+class PathologyRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = PathologyGeneralSerializer
+    queryset = Pathology.objects.all()
